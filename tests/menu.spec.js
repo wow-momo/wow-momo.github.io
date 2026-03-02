@@ -10,7 +10,7 @@ test.describe('Menu Page', () => {
   // ─── Structure ───
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Menu.*WoW Mo:Mo/i);
+    await expect(page).toHaveTitle(/Menu.*WoW!!! Mo:Mo/i);
   });
 
   test('has H1 heading', async ({ page }) => {
@@ -132,7 +132,7 @@ test.describe('Menu Page', () => {
   // ─── All images have alt text ───
 
   test('all images have alt text', async ({ page }) => {
-    const images = page.locator('img');
+    const images = page.locator('img:not([aria-hidden="true"])');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
       const alt = await images.nth(i).getAttribute('alt');

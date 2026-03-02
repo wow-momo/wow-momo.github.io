@@ -70,14 +70,18 @@ test.describe('Accessibility (axe-core)', () => {
     test(`${name} — all interactive elements are keyboard-accessible`, async ({ page }) => {
       await page.goto(url);
 
-      // Check that buttons and links are focusable
+      // Check that visible buttons and links are focusable
       const interactiveCount = await page.evaluate(() => {
         const elements = document.querySelectorAll('a[href], button, input, select, textarea');
+        let total = 0;
         let focusable = 0;
         elements.forEach(el => {
+          // Skip hidden elements (e.g. honeypot fields)
+          if (el.offsetParent === null && getComputedStyle(el).display === 'none') return;
+          total++;
           if (el.tabIndex >= 0) focusable++;
         });
-        return { total: elements.length, focusable };
+        return { total, focusable };
       });
 
       expect(interactiveCount.focusable).toBe(interactiveCount.total);

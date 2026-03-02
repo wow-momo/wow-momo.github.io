@@ -10,7 +10,7 @@ test.describe('Homepage', () => {
   // ─── Structure & Content ───
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/WoW Mo:Mo/i);
+    await expect(page).toHaveTitle(/WoW!!! Mo:Mo/i);
   });
 
   test('has meta description', async ({ page }) => {
@@ -39,7 +39,7 @@ test.describe('Homepage', () => {
   });
 
   test('logo links to homepage', async ({ page }) => {
-    const logo = page.locator('a[aria-label="WoW Mo:Mo Home"]').first();
+    const logo = page.locator('a[aria-label="WoW!!! Mo:Mo Home"]').first();
     await expect(logo).toHaveAttribute('href', 'index.html');
   });
 
@@ -119,7 +119,7 @@ test.describe('Homepage', () => {
   // ─── Images ───
 
   test('all images have alt text', async ({ page }) => {
-    const images = page.locator('img');
+    const images = page.locator('img:not([aria-hidden="true"])');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
       const alt = await images.nth(i).getAttribute('alt');

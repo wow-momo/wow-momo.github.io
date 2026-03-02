@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — WoW Mo:Mo | Get in Touch</title>
-  <meta name="description" content="Contact WoW Mo:Mo for frozen momo orders, inquiries, and more. Email us at nepali.wow.momo@gmail.com. Restaurant coming soon!">
+  <title>Contact — WoW!!! Mo:Mo | Get in Touch</title>
+  <meta name="description" content="Contact WoW!!! Mo:Mo for frozen momo orders, inquiries, and more. Email us at nepali.wow.momo@gmail.com. Restaurant coming soon!">
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,9 +46,10 @@
   <!-- NAVIGATION -->
   <header class="fixed top-0 inset-x-0 z-50 bg-charcoal/95 backdrop-blur-xl border-b border-white/5" id="navbar" role="banner">
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 lg:h-20" aria-label="Main navigation">
-      <a href="index.html" class="flex items-center gap-2 group" aria-label="WoW Mo:Mo Home">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="WoW!!! Mo:Mo Home">
+        <img src="images/logo-icon.svg" alt="" class="w-9 h-9 lg:w-10 lg:h-10 group-hover:scale-110 transition-transform" aria-hidden="true">
         <span class="text-2xl lg:text-3xl font-heading font-800 tracking-tight">
-          <span class="text-saffron group-hover:text-saffron-light transition-colors">WoW</span>
+          <span class="text-saffron group-hover:text-saffron-light transition-colors">WoW<span class="text-saffron-light">!!!</span></span>
           <span class="text-white group-hover:text-warm transition-colors"> Mo:Mo</span>
         </span>
       </a>
@@ -179,7 +181,7 @@
                 </div>
                 <div>
                   <span class="font-heading font-700 text-white text-sm group-hover:text-saffron transition-colors">Facebook</span>
-                  <p class="text-warm/60 text-xs">WoW Mo:Mo</p>
+                  <p class="text-warm/60 text-xs">WoW!!! Mo:Mo</p>
                 </div>
               </a>
 
@@ -199,7 +201,7 @@
                 </div>
                 <div>
                   <span class="font-heading font-700 text-white text-sm group-hover:text-saffron transition-colors">YouTube</span>
-                  <p class="text-warm/60 text-xs">WoW Mo:Mo</p>
+                  <p class="text-warm/60 text-xs">WoW!!! Mo:Mo</p>
                 </div>
               </a>
             </div>
@@ -212,7 +214,13 @@
               Have a question about frozen mo:mos, restaurant launch, or just want to say hi? Drop us a line.
             </p>
 
-            <form class="space-y-5" id="contact-form" novalidate>
+            <form class="space-y-5" id="contact-form" action="https://formsubmit.co/nepali.wow.momo@gmail.com" method="POST" novalidate>
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_next" value="https://wow-momo.github.io/contact.html?success=true">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="true">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
               <div>
                 <label for="name" class="block text-warm/70 text-sm font-600 mb-2">Name</label>
                 <input
@@ -232,15 +240,15 @@
               <div>
                 <label for="subject" class="block text-warm/70 text-sm font-600 mb-2">Subject</label>
                 <select
-                  id="subject" name="subject"
+                  id="subject" name="_subject"
                   class="w-full bg-charcoal-light border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-colors"
                 >
                   <option value="" class="text-warm/50">Select a topic</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="order">Frozen Momo Order</option>
-                  <option value="catering">Catering</option>
-                  <option value="feedback">Feedback</option>
-                  <option value="press">Press / Media</option>
+                  <option value="WoW!!! Mo:Mo — General Inquiry">General Inquiry</option>
+                  <option value="WoW!!! Mo:Mo — Frozen Momo Order">Frozen Momo Order</option>
+                  <option value="WoW!!! Mo:Mo — Catering">Catering</option>
+                  <option value="WoW!!! Mo:Mo — Feedback">Feedback</option>
+                  <option value="WoW!!! Mo:Mo — Press / Media">Press / Media</option>
                 </select>
               </div>
               <div>
@@ -272,7 +280,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="sm:col-span-2 lg:col-span-1">
-          <a href="index.html" class="inline-block mb-4"><span class="text-2xl font-heading font-800"><span class="text-saffron">WoW</span> <span class="text-white">Mo:Mo</span></span></a>
+          <a href="index.html" class="inline-flex items-center gap-3 mb-4"><img src="images/logo-icon.svg" alt="" class="w-8 h-8" aria-hidden="true"><span class="text-2xl font-heading font-800"><span class="text-saffron">WoW<span class="text-saffron-light">!!!</span></span> <span class="text-white">Mo:Mo</span></span></a>
           <p class="text-warm/60 text-sm leading-relaxed max-w-xs">Authentic Nepali momos, hand-folded with love. Frozen packs available now.</p>
         </div>
         <div>
@@ -304,7 +312,7 @@
         </div>
       </div>
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-warm/50 text-sm">&copy; 2026 WoW Mo:Mo. All rights reserved.</p>
+        <p class="text-warm/50 text-sm">&copy; 2026 WoW!!! Mo:Mo. All rights reserved.</p>
         <div class="flex gap-6 text-warm/50 text-sm">
           <a href="#" class="hover:text-warm/80 transition-colors">Privacy</a>
           <a href="#" class="hover:text-warm/80 transition-colors">Terms</a>

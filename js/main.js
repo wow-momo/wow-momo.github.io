@@ -162,9 +162,22 @@
     var form = document.getElementById('contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    // Show success banner if redirected back after FormSubmit
+    if (window.location.search.indexOf('success=true') !== -1) {
+      var banner = document.createElement('div');
+      banner.className = 'fixed top-0 left-0 right-0 z-[9999] bg-green-600 text-white text-center py-4 px-6 font-heading font-700 text-lg shadow-lg';
+      banner.innerHTML = '✓ Message sent successfully! We\u2019ll get back to you soon. <button onclick="this.parentElement.remove();history.replaceState(null,\'\',location.pathname)" class="ml-4 underline text-white/80 hover:text-white">Dismiss</button>';
+      document.body.prepend(banner);
+      // Auto-dismiss after 8 seconds
+      setTimeout(function () {
+        if (banner.parentElement) {
+          banner.remove();
+          history.replaceState(null, '', location.pathname);
+        }
+      }, 8000);
+    }
 
+    form.addEventListener('submit', function (e) {
       var name = form.querySelector('#name');
       var email = form.querySelector('#email');
       var message = form.querySelector('#message');
@@ -188,19 +201,14 @@
         valid = false;
       }
 
-      if (valid) {
+      if (!valid) {
+        e.preventDefault(); // Block submission only if invalid
+      } else {
+        // Show sending state (form will navigate away to FormSubmit)
         var btn = form.querySelector('button[type="submit"]');
         if (btn) {
-          var originalText = btn.innerHTML;
-          btn.innerHTML = '✓ Message Sent!';
-          btn.style.background = '#22c55e';
+          btn.innerHTML = 'Sending\u2026';
           btn.disabled = true;
-          setTimeout(function () {
-            btn.innerHTML = originalText;
-            btn.style.background = '';
-            btn.disabled = false;
-            form.reset();
-          }, 3000);
         }
       }
     });

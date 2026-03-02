@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- WoW!!! Mo:Mo favicon / icon -->
+  <rect width="64" height="64" rx="14" fill="#E85D26"/>
+  
+  <!-- Dumpling body -->
+  <path d="M32 16 C20 16 12 28 12 38 C12 48 20 54 32 54 C44 54 52 48 52 38 C52 28 44 16 32 16Z" fill="#FFF5E6" opacity="0.95"/>
+  
+  <!-- Pleats -->
+  <path d="M32 16 C32 16 28 26 26 32" stroke="#E85D26" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M32 16 C32 16 32 28 32 34" stroke="#E85D26" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M32 16 C32 16 36 26 38 32" stroke="#E85D26" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Steam -->
+  <path d="M25 12 C25 8 22 6 24 2" stroke="#FFF5E6" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <path d="M32 10 C32 6 30 4 32 0" stroke="#FFF5E6" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M39 12 C39 8 42 6 40 2" stroke="#FFF5E6" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+  
+  <!-- Plate -->
+  <ellipse cx="32" cy="54" rx="20" ry="4" fill="#D14E1D" opacity="0.3"/>
+</svg>
