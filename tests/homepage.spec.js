@@ -43,10 +43,10 @@ test.describe('Homepage', () => {
     await expect(logo).toHaveAttribute('href', 'index.html');
   });
 
-  test('has "Order Now" CTA button in header', async ({ page }) => {
-    const orderBtn = page.locator('header a[href="#order"]').first();
+  test('has "Order Frozen Mo:Mos" CTA button in header', async ({ page }) => {
+    const orderBtn = page.locator('header a[href^="mailto:"]').first();
     await expect(orderBtn).toBeAttached();
-    await expect(orderBtn).toContainText('Order Now');
+    await expect(orderBtn).toContainText('Order Frozen Mo:Mos');
   });
 
   // ─── Hero Section ───
@@ -60,7 +60,7 @@ test.describe('Homepage', () => {
   });
 
   test('hero has CTA buttons', async ({ page }) => {
-    const orderCTA = page.locator('section[aria-label="Hero"] a[href="#order"]');
+    const orderCTA = page.locator('section[aria-label="Hero"] a[href^="mailto:"]');
     await expect(orderCTA).toBeVisible();
 
     const menuCTA = page.locator('section[aria-label="Hero"] a[href="menu.html"]');
@@ -102,12 +102,12 @@ test.describe('Homepage', () => {
 
   // ─── Footer ───
 
-  test('footer has hours, contact, and links', async ({ page }) => {
+  test('footer has status, contact, and links', async ({ page }) => {
     const footer = page.locator('footer');
     await expect(footer).toBeVisible();
-    await expect(footer).toContainText('Hours');
+    await expect(footer).toContainText('Status');
     await expect(footer).toContainText('Contact');
-    await expect(footer).toContainText('Manor, TX');
+    await expect(footer).toContainText('nepali.wow.momo@gmail.com');
   });
 
   test('footer has social media links', async ({ page }) => {

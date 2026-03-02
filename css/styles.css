@@ -172,6 +172,47 @@ textarea:focus-visible {
   }
 }
 
+/* ─── Coming Soon overlay for menu items ─── */
+.coming-soon-item {
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+}
+.coming-soon-item > * {
+  filter: grayscale(100%) brightness(0.6);
+  opacity: 0.45;
+}
+.coming-soon-item::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(26, 26, 26, 0.85);
+  color: #F5F0EB;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(232, 93, 38, 0.5);
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.coming-soon-item:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ─── Coming Soon banner ─── */
+.coming-soon-banner {
+  background: linear-gradient(135deg, var(--charcoal-light, #2D2D2D) 0%, var(--charcoal, #1A1A1A) 100%);
+  border: 1px solid rgba(232, 93, 38, 0.3);
+}
+
 /* ─── Print ─── */
 @media print {
   header, footer, .fixed, #mobile-order-bar { display: none !important; }

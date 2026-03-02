@@ -16,10 +16,10 @@ test.describe('Mobile Experience', () => {
       await page.goto('/index.html');
     });
 
-    test('sticky "Order Now" button is visible at bottom', async ({ page }) => {
-      const orderBar = page.locator('#mobile-order-bar a, .fixed.bottom-0 a[href="#order"]').first();
+    test('sticky "Order Frozen Mo:Mos" button is visible at bottom', async ({ page }) => {
+      const orderBar = page.locator('#mobile-order-bar a, .fixed.bottom-0 a[href^="mailto:"]').first();
       await expect(orderBar).toBeVisible();
-      await expect(orderBar).toContainText('Order Now');
+      await expect(orderBar).toContainText('Order Frozen Mo:Mos');
     });
 
     test('hamburger menu button is visible on mobile', async ({ page }) => {
@@ -123,8 +123,8 @@ test.describe('Mobile Experience', () => {
       }
     });
 
-    test('sticky "Order Now" button visible on menu page', async ({ page }) => {
-      const orderBtn = page.locator('.fixed.bottom-0 a[href="#order"]').first();
+    test('sticky "Order" button visible on menu page', async ({ page }) => {
+      const orderBtn = page.locator('.fixed.bottom-0 a[href^="mailto:"]').first();
       await expect(orderBtn).toBeVisible();
     });
 
@@ -158,9 +158,10 @@ test.describe('Mobile Experience', () => {
       }
     });
 
-    test('phone number is clickable (tel: link)', async ({ page }) => {
-      const phoneLink = page.locator('a[href^="tel:"]').first();
-      await expect(phoneLink).toBeVisible();
+    test('email is clickable (mailto: link)', async ({ page }) => {
+      const emailLinks = page.locator('a[href^="mailto:"]:visible');
+      const count = await emailLinks.count();
+      expect(count).toBeGreaterThanOrEqual(1);
     });
   });
 
