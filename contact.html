@@ -5,7 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — WoW!!! Mo:Mo | Get in Touch</title>
   <meta name="description" content="Contact WoW!!! Mo:Mo for frozen momo orders, inquiries, and more. Email us at nepali.wow.momo@gmail.com. Restaurant coming soon!">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="WoW!!! Mo:Mo">
+  <meta name="theme-color" content="#E85D26">
   <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="apple-touch-icon" href="images/logo-icon.svg">
+  <link rel="canonical" href="https://wow-momo.github.io/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — WoW!!! Mo:Mo | Get in Touch">
+  <meta property="og:description" content="Order frozen momos or get in touch. Email nepali.wow.momo@gmail.com. Restaurant coming soon!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wow-momo.github.io/contact.html">
+  <meta property="og:image" content="https://wow-momo.github.io/images/og-hero.jpg">
+  <meta property="og:site_name" content="WoW!!! Mo:Mo">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — WoW!!! Mo:Mo">
+  <meta name="twitter:description" content="Order frozen momos or reach out. Email nepali.wow.momo@gmail.com.">
+  <meta name="twitter:image" content="https://wow-momo.github.io/images/og-hero.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wow-momo.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://wow-momo.github.io/contact.html" }
+    ]
+  }
+  </script>
+
+  <link rel="dns-prefetch" href="https://formsubmit.co">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -243,7 +276,7 @@
                   id="subject" name="_subject"
                   class="w-full bg-charcoal-light border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-colors"
                 >
-                  <option value="" class="text-warm/50">Select a topic</option>
+                  <option value="" disabled selected class="text-warm/50">Select a topic</option>
                   <option value="WoW!!! Mo:Mo — General Inquiry">General Inquiry</option>
                   <option value="WoW!!! Mo:Mo — Frozen Momo Order">Frozen Momo Order</option>
                   <option value="WoW!!! Mo:Mo — Catering">Catering</option>
@@ -312,10 +345,10 @@
         </div>
       </div>
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-warm/50 text-sm">&copy; 2026 WoW!!! Mo:Mo. All rights reserved.</p>
-        <div class="flex gap-6 text-warm/50 text-sm">
-          <a href="#" class="hover:text-warm/80 transition-colors">Privacy</a>
-          <a href="#" class="hover:text-warm/80 transition-colors">Terms</a>
+        <p class="text-warm/60 text-sm">&copy; 2026 WoW!!! Mo:Mo. All rights reserved.</p>
+        <div class="flex gap-6 text-warm/60 text-sm">
+          <span>Privacy</span>
+          <span>Terms</span>
         </div>
       </div>
     </div>
@@ -324,7 +357,7 @@
   <!-- Mobile sticky Order button -->
   <div class="fixed bottom-0 inset-x-0 z-50 sm:hidden p-4 bg-gradient-to-t from-charcoal via-charcoal/95 to-transparent pointer-events-none">
     <a href="mailto:nepali.wow.momo@gmail.com?subject=Frozen%20Momo%20Order" class="pointer-events-auto flex items-center justify-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 text-base py-4 rounded-full w-full shadow-xl shadow-saffron/30 transition-all active:scale-95">
-      🥟 Order Frozen Mo:Mos
+      <span role="img" aria-label="dumpling">🥟</span> Order Frozen Mo:Mos
     </a>
   </div>
 

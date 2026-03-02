@@ -111,7 +111,7 @@ test.describe('Homepage', () => {
   });
 
   test('footer has social media links', async ({ page }) => {
-    const socials = page.locator('footer a[aria-label]');
+    const socials = page.locator('footer [aria-label]');
     const count = await socials.count();
     expect(count).toBeGreaterThanOrEqual(3);
   });

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — WoW!!! Mo:Mo</title>
+  <meta name="description" content="Oops! The page you're looking for doesn't exist. Head back to WoW!!! Mo:Mo for authentic Nepali momos in Manor, TX.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#E85D26">
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="apple-touch-icon" href="images/logo-icon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#E85D26',
+            warm: '#FFF8F0',
+            dark: '#1A1A1A',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark text-warm font-body min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-dark/95 backdrop-blur-md border-b border-warm/10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group" aria-label="WoW!!! Mo:Mo home">
+        <img src="images/logo-icon.svg" alt="WoW!!! Mo:Mo logo" class="h-10 w-10">
+        <span class="font-display text-xl text-warm group-hover:text-brand transition-colors">WoW!!! Mo:Mo</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a href="/" class="text-warm/70 hover:text-brand transition-colors">Home</a></li>
+          <li><a href="menu.html" class="text-warm/70 hover:text-brand transition-colors">Menu</a></li>
+          <li><a href="our-story.html" class="text-warm/70 hover:text-brand transition-colors">Our Story</a></li>
+          <li><a href="contact.html" class="text-warm/70 hover:text-brand transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 404 Content -->
+  <main class="flex-1 flex items-center justify-center px-4 py-20">
+    <div class="text-center max-w-lg">
+      <p class="text-brand text-8xl font-display font-extrabold mb-4">404</p>
+      <h1 class="font-display text-3xl md:text-4xl text-warm mb-4">Page Not Found</h1>
+      <p class="text-warm/70 text-lg mb-8">
+        Looks like this momo slipped out of the steamer! The page you're looking for doesn't exist or has been moved.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="inline-block bg-brand text-warm font-semibold px-8 py-3 rounded-full hover:bg-orange-700 transition-colors">
+          Back to Home
+        </a>
+        <a href="menu.html" class="inline-block border border-brand text-brand font-semibold px-8 py-3 rounded-full hover:bg-brand hover:text-warm transition-colors">
+          View Menu
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark border-t border-warm/10 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-warm/60 text-sm">&copy; 2025 WoW!!! Mo:Mo. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
