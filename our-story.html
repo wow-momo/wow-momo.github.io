@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — WoW Mo:Mo | From Kathmandu to Manor, TX</title>
+  <meta name="description" content="Learn about the passion behind WoW Mo:Mo — bringing authentic Nepali momos from the streets of Kathmandu to Manor, Texas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            saffron:  { DEFAULT: '#E85D26', light: '#F07840', dark: '#B94316' },
+            chili:    { DEFAULT: '#C41E3A', light: '#E02E4A', dark: '#9A1830' },
+            turmeric: { DEFAULT: '#F4A623', light: '#FFB84D', dark: '#7D5610' },
+            charcoal: { DEFAULT: '#1A1A1A', light: '#2D2D2D', medium: '#3A3A3A' },
+            warm:     { DEFAULT: '#F5F0EB', light: '#FAF7F4', dark: '#E8E0D8' },
+          },
+          fontWeight: {
+            500: '500',
+            600: '600',
+            700: '700',
+            800: '800',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-body text-charcoal bg-white antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-saffron-dark text-white px-4 py-2 rounded z-[9999]">Skip to main content</a>
+
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-charcoal/95 backdrop-blur-xl border-b border-white/5" id="navbar" role="banner">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 lg:h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2 group" aria-label="WoW Mo:Mo Home">
+        <span class="text-2xl lg:text-3xl font-heading font-800 tracking-tight">
+          <span class="text-saffron group-hover:text-saffron-light transition-colors">WoW</span>
+          <span class="text-white group-hover:text-warm transition-colors"> Mo:Mo</span>
+        </span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 font-heading font-600 text-sm tracking-wide uppercase" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link text-warm/70 hover:text-saffron transition-colors" role="menuitem">Home</a></li>
+        <li role="none"><a href="menu.html" class="nav-link text-warm/70 hover:text-saffron transition-colors" role="menuitem">Menu</a></li>
+        <li role="none"><a href="our-story.html" class="nav-link text-warm hover:text-saffron transition-colors" role="menuitem" aria-current="page">Our Story</a></li>
+        <li role="none"><a href="contact.html" class="nav-link text-warm/70 hover:text-saffron transition-colors" role="menuitem">Visit Us</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="#order" class="hidden sm:inline-flex items-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 text-sm px-5 py-2.5 rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-saffron/30">Order Now</a>
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 group" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line w-6 h-0.5 bg-white rounded transition-all group-hover:bg-saffron"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-white rounded transition-all group-hover:bg-saffron"></span>
+          <span class="hamburger-line w-4 h-0.5 bg-white rounded transition-all group-hover:bg-saffron group-hover:w-6"></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden bg-charcoal/98 backdrop-blur-xl border-t border-white/5" role="menu">
+      <ul class="flex flex-col px-6 py-6 gap-4 font-heading font-600 text-lg">
+        <li><a href="index.html" class="block py-2 text-warm/80 hover:text-saffron transition-colors" role="menuitem">Home</a></li>
+        <li><a href="menu.html" class="block py-2 text-warm/80 hover:text-saffron transition-colors" role="menuitem">Menu</a></li>
+        <li><a href="our-story.html" class="block py-2 text-saffron" role="menuitem">Our Story</a></li>
+        <li><a href="contact.html" class="block py-2 text-warm/80 hover:text-saffron transition-colors" role="menuitem">Visit Us</a></li>
+        <li class="pt-2"><a href="#order" class="inline-flex items-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 px-6 py-3 rounded-full transition-all w-full justify-center">Order Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-charcoal overflow-hidden" aria-label="Our story hero">
+      <div class="absolute inset-0">
+        <img src="images/kitchen-story.jpg" alt="Hands carefully folding momos in a warm kitchen" class="w-full h-full object-cover opacity-30" loading="eager" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/60 to-charcoal"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block font-heading font-700 text-saffron text-sm uppercase tracking-widest mb-4">Our Story</span>
+        <h1 class="font-heading font-800 text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
+          From <span class="text-saffron">Kathmandu</span> Streets<br>
+          to <span class="text-turmeric">Manor, TX</span>
+        </h1>
+        <p class="text-warm/60 text-lg sm:text-xl max-w-2xl mx-auto">
+          A story of family, flavor, and the dream to share Nepal's most beloved street food with Texas.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         STORY CONTENT
+    ═══════════════════════════════════════════ -->
+    <section class="py-20 lg:py-28 bg-warm" aria-labelledby="story-content">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Chapter 1 -->
+        <div class="mb-16 lg:mb-24">
+          <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+            <div class="lg:col-span-3">
+              <span class="inline-block font-heading font-700 text-saffron-dark text-sm uppercase tracking-widest mb-3">Chapter One</span>
+              <h2 id="story-content" class="font-heading font-800 text-2xl sm:text-3xl text-charcoal mb-6">It Started With a Memory</h2>
+              <p class="text-charcoal/70 text-lg leading-relaxed mb-4">
+                Growing up in Nepal, momos weren't just food. They were <strong class="text-charcoal">family gatherings</strong> around a steaming bamboo basket. They were the smell of garlic, ginger, and cumin filling the kitchen. They were the sound of laughter and the warmth of home.
+              </p>
+              <p class="text-charcoal/70 text-lg leading-relaxed">
+                When we moved to Texas, we brought our spices, our recipes, and our deep love for momos. But we couldn't find a single place that made them the right way — the <em>real</em> way. Hand-folded. Perfectly spiced. Made with soul.
+              </p>
+            </div>
+            <div class="lg:col-span-2">
+              <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-charcoal/5">
+                <img src="images/nepal-street.jpg" alt="A bustling Kathmandu street food stall serving momos" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-saffron/10 to-turmeric/10 flex items-center justify-center\'><span class=\'text-6xl\'>🇳🇵</span></div>'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="mb-16 lg:mb-24">
+          <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+            <div class="lg:col-span-2 lg:order-1">
+              <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-charcoal/5">
+                <img src="images/momo-making.jpg" alt="Close-up of hands delicately pleating a momo dumpling" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-chili/10 to-saffron/10 flex items-center justify-center\'><span class=\'text-6xl\'>🤲</span></div>'">
+              </div>
+            </div>
+            <div class="lg:col-span-3 lg:order-2">
+              <span class="inline-block font-heading font-700 text-saffron-dark text-sm uppercase tracking-widest mb-3">Chapter Two</span>
+              <h2 class="font-heading font-800 text-2xl sm:text-3xl text-charcoal mb-6">If Nobody Else Will, We Will</h2>
+              <p class="text-charcoal/70 text-lg leading-relaxed mb-4">
+                So we did what any momo-obsessed family would do: we opened our own spot. <strong class="text-charcoal">WoW Mo:Mo</strong> was born from a simple conviction — Manor, TX deserves a place where the dumplings are <span class="text-saffron-dark font-600">handmade with zero shortcuts</span>.
+              </p>
+              <p class="text-charcoal/70 text-lg leading-relaxed">
+                We spent months perfecting our dough, dialing in our spice blends, and testing every fold technique until every single momo met our family's standard. No machine-stamped dumplings. No generic fillings. Just the same momos we grew up eating — the kind that make you close your eyes and savor every bite.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="mb-16 lg:mb-24">
+          <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+            <div class="lg:col-span-3">
+              <span class="inline-block font-heading font-700 text-saffron-dark text-sm uppercase tracking-widest mb-3">Chapter Three</span>
+              <h2 class="font-heading font-800 text-2xl sm:text-3xl text-charcoal mb-6">More Than Mo:Mos</h2>
+              <p class="text-charcoal/70 text-lg leading-relaxed mb-4">
+                WoW Mo:Mo isn't just a restaurant — it's a <strong class="text-charcoal">bridge between cultures</strong>. We want every guest who walks through our doors to experience the warmth of Nepali hospitality, the boldness of our flavors, and the joy that a perfectly folded momo can bring.
+              </p>
+              <p class="text-charcoal/70 text-lg leading-relaxed">
+                Whether you've been eating momos your whole life or you're about to try your very first one, we're here to make it unforgettable. Welcome to our table. Welcome to the family.
+              </p>
+            </div>
+            <div class="lg:col-span-2">
+              <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-charcoal/5">
+                <img src="images/team-wow.jpg" alt="The WoW Mo:Mo team smiling in front of the restaurant" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-turmeric/10 to-saffron/10 flex items-center justify-center\'><span class=\'text-6xl\'>👨‍👩‍👧‍👦</span></div>'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-charcoal/5">
+          <h2 class="font-heading font-800 text-2xl sm:text-3xl text-charcoal text-center mb-10">What We Stand For</h2>
+          <div class="grid sm:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-14 h-14 mx-auto mb-4 bg-saffron/10 rounded-2xl flex items-center justify-center">
+                <span class="text-2xl">🔥</span>
+              </div>
+              <h3 class="font-heading font-700 text-lg text-charcoal mb-2">Authenticity</h3>
+              <p class="text-charcoal/65 text-sm leading-relaxed">We honor the traditional recipes and techniques that have been perfected over generations in Nepal.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-14 h-14 mx-auto mb-4 bg-turmeric/10 rounded-2xl flex items-center justify-center">
+                <span class="text-2xl">✨</span>
+              </div>
+              <h3 class="font-heading font-700 text-lg text-charcoal mb-2">Quality</h3>
+              <p class="text-charcoal/65 text-sm leading-relaxed">Premium ingredients, hand-folded daily. We would never serve something we wouldn't eat ourselves.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-14 h-14 mx-auto mb-4 bg-chili/10 rounded-2xl flex items-center justify-center">
+                <span class="text-2xl">❤️</span>
+              </div>
+              <h3 class="font-heading font-700 text-lg text-charcoal mb-2">Community</h3>
+              <p class="text-charcoal/65 text-sm leading-relaxed">We're proud to be part of Manor, TX. This is our home and you're our family.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative py-20 bg-saffron-dark overflow-hidden" aria-label="Call to action">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-saffron/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading font-800 text-3xl sm:text-4xl text-white mb-4">Come Taste the Story</h2>
+        <p class="text-white text-lg max-w-xl mx-auto mb-8">Every momo has a story. Yours starts here.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="menu.html" class="inline-flex items-center justify-center gap-2 bg-white text-saffron-dark hover:bg-warm font-heading font-700 text-lg px-8 py-4 rounded-full transition-all hover:scale-105 hover:shadow-xl">
+            View Our Menu
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-saffron-dark font-heading font-600 text-lg px-8 py-4 rounded-full transition-all hover:scale-105">
+            Visit Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal border-t border-white/5 pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-block mb-4"><span class="text-2xl font-heading font-800"><span class="text-saffron">WoW</span> <span class="text-white">Mo:Mo</span></span></a>
+          <p class="text-warm/60 text-sm leading-relaxed max-w-xs">Authentic Nepali momos, hand-folded with love in Manor, TX.</p>
+        </div>
+        <div>
+          <h3 class="font-heading font-700 text-white text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="menu.html" class="text-warm/60 hover:text-saffron text-sm transition-colors">Menu</a></li>
+            <li><a href="our-story.html" class="text-warm/60 hover:text-saffron text-sm transition-colors">Our Story</a></li>
+            <li><a href="contact.html" class="text-warm/60 hover:text-saffron text-sm transition-colors">Visit Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-heading font-700 text-white text-sm uppercase tracking-wider mb-4">Hours</h3>
+          <ul class="space-y-2 text-warm/60 text-sm">
+            <li class="flex justify-between"><span>Mon – Thu</span><span class="text-warm/70">11am – 9pm</span></li>
+            <li class="flex justify-between"><span>Fri – Sat</span><span class="text-warm/70">11am – 10pm</span></li>
+            <li class="flex justify-between"><span>Sunday</span><span class="text-warm/70">12pm – 8pm</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-heading font-700 text-white text-sm uppercase tracking-wider mb-4">Contact</h3>
+          <ul class="space-y-2 text-warm/60 text-sm">
+            <li>123 Main Street, Manor, TX 78653</li>
+            <li><a href="tel:+15125551234" class="hover:text-saffron transition-colors">(512) 555-1234</a></li>
+            <li><a href="mailto:hello@wowmomo.com" class="hover:text-saffron transition-colors">hello@wowmomo.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-warm/50 text-sm">&copy; 2026 WoW Mo:Mo. All rights reserved.</p>
+        <div class="flex gap-6 text-warm/50 text-sm">
+          <a href="#" class="hover:text-warm/80 transition-colors">Privacy</a>
+          <a href="#" class="hover:text-warm/80 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky Order button -->
+  <div class="fixed bottom-0 inset-x-0 z-50 sm:hidden p-4 bg-gradient-to-t from-charcoal via-charcoal/95 to-transparent pointer-events-none">
+    <a href="#order" class="pointer-events-auto flex items-center justify-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 text-base py-4 rounded-full w-full shadow-xl shadow-saffron/30 transition-all active:scale-95">
+      🥟 Order Now
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

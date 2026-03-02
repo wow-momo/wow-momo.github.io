@@ -1,0 +1,180 @@
+/* ═══════════════════════════════════════════════
+   WoW Mo:Mo — Custom Styles
+   Supplement to Tailwind CSS
+   ═══════════════════════════════════════════════ */
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  --saffron: #E85D26;
+  --saffron-light: #FF7A45;
+  --chili: #C41E3A;
+  --turmeric: #F4A623;
+  --charcoal: #1A1A1A;
+  --charcoal-light: #2D2D2D;
+  --warm: #F5F0EB;
+}
+
+/* ─── Smooth scroll ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: var(--saffron);
+  color: white;
+}
+
+/* ─── Scrollbar (WebKit) ─── */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes spiceDrift {
+  0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.6; }
+  100% { transform: translate(100px, -200px) rotate(180deg); opacity: 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out both;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-600 { animation-delay: 600ms; }
+
+/* ─── Spice particles (hero) ─── */
+.spice-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--saffron);
+  border-radius: 50%;
+  animation: spiceDrift 8s ease-in-out infinite;
+}
+.spice-1 { bottom: 20%; left: 60%; animation-delay: 0s; }
+.spice-2 { bottom: 30%; left: 70%; animation-delay: 2.5s; width: 4px; height: 4px; background: var(--turmeric); }
+.spice-3 { bottom: 25%; left: 65%; animation-delay: 5s; width: 3px; height: 3px; background: var(--chili); }
+
+/* ─── Navbar states ─── */
+#navbar {
+  background: transparent;
+}
+#navbar.scrolled {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Pages that are NOT the homepage always have solid nav */
+body:not(.home-page) #navbar,
+.menu-page #navbar,
+.story-page #navbar,
+.contact-page #navbar {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ─── Menu Tab Styles ─── */
+.menu-tab {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(245, 240, 235, 0.5);
+  background: transparent;
+}
+.menu-tab:hover {
+  border-color: var(--saffron);
+  color: var(--saffron);
+}
+.menu-tab.active {
+  background: #B94316;
+  border-color: #B94316;
+  color: white;
+}
+
+/* ─── Dietary badges ─── */
+.dietary-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+/* ─── Intersection Observer reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Focus visible styles (a11y) ─── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Mobile order bar padding ─── */
+@media (max-width: 639px) {
+  main {
+    padding-bottom: 80px;
+  }
+}
+
+/* ─── Print ─── */
+@media print {
+  header, footer, .fixed, #mobile-order-bar { display: none !important; }
+  main { padding: 0 !important; }
+  body { background: white !important; color: black !important; }
+}

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — WoW Mo:Mo | Authentic Nepali Momos in Manor, TX</title>
+  <meta name="description" content="Explore our full menu of steamed, fried, and jhol momos, plus sides and drinks. Fresh, hand-folded Nepali dumplings in Manor, TX.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            saffron:  { DEFAULT: '#E85D26', light: '#F07840', dark: '#B94316' },
+            chili:    { DEFAULT: '#C41E3A', light: '#E02E4A', dark: '#9A1830' },
+            turmeric: { DEFAULT: '#F4A623', light: '#FFB84D', dark: '#7D5610' },
+            charcoal: { DEFAULT: '#1A1A1A', light: '#2D2D2D', medium: '#3A3A3A' },
+            warm:     { DEFAULT: '#F5F0EB', light: '#FAF7F4', dark: '#E8E0D8' },
+          },
+          fontWeight: {
+            500: '500',
+            600: '600',
+            700: '700',
+            800: '800',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-body text-charcoal bg-charcoal antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-saffron-dark text-white px-4 py-2 rounded z-[9999]">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-charcoal/95 backdrop-blur-xl border-b border-white/5" id="navbar" role="banner">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 lg:h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2 group" aria-label="WoW Mo:Mo Home">
+        <span class="text-2xl lg:text-3xl font-heading font-800 tracking-tight">
+          <span class="text-saffron group-hover:text-saffron-light transition-colors">WoW</span>
+          <span class="text-white group-hover:text-warm transition-colors"> Mo:Mo</span>
+        </span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 font-heading font-600 text-sm tracking-wide uppercase" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link text-warm/70 hover:text-saffron transition-colors" role="menuitem">Home</a></li>
+        <li role="none"><a href="menu.html" class="nav-link text-warm hover:text-saffron transition-colors" role="menuitem" aria-current="page">Menu</a></li>
+        <li role="none"><a href="our-story.html" class="nav-link text-warm/70 hover:text-saffron transition-colors" role="menuitem">Our Story</a></li>
+        <li role="none"><a href="contact.html" class="nav-link text-warm/70 hover:text-saffron transition-colors" role="menuitem">Visit Us</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="#order" class="hidden sm:inline-flex items-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 text-sm px-5 py-2.5 rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-saffron/30">
+          Order Now
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 group" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line w-6 h-0.5 bg-white rounded transition-all group-hover:bg-saffron"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-white rounded transition-all group-hover:bg-saffron"></span>
+          <span class="hamburger-line w-4 h-0.5 bg-white rounded transition-all group-hover:bg-saffron group-hover:w-6"></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden bg-charcoal/98 backdrop-blur-xl border-t border-white/5" role="menu">
+      <ul class="flex flex-col px-6 py-6 gap-4 font-heading font-600 text-lg">
+        <li><a href="index.html" class="block py-2 text-warm/80 hover:text-saffron transition-colors" role="menuitem">Home</a></li>
+        <li><a href="menu.html" class="block py-2 text-saffron" role="menuitem">Menu</a></li>
+        <li><a href="our-story.html" class="block py-2 text-warm/80 hover:text-saffron transition-colors" role="menuitem">Our Story</a></li>
+        <li><a href="contact.html" class="block py-2 text-warm/80 hover:text-saffron transition-colors" role="menuitem">Visit Us</a></li>
+        <li class="pt-2"><a href="#order" class="inline-flex items-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 px-6 py-3 rounded-full transition-all w-full justify-center">Order Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════════
+         MENU HERO
+    ═══════════════════════════════════════════ -->
+    <section class="pt-24 lg:pt-32 pb-12 bg-charcoal" aria-label="Menu header">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block font-heading font-700 text-saffron text-sm uppercase tracking-widest mb-4">Our Menu</span>
+        <h1 class="font-heading font-800 text-4xl sm:text-5xl lg:text-6xl text-white mb-4">
+          Something for Every <span class="text-saffron">Craving</span>
+        </h1>
+        <p class="text-warm/60 text-lg max-w-2xl mx-auto">
+          Every momo is hand-folded fresh daily with premium ingredients and authentic Nepali spices. No shortcuts, just WoW.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CATEGORY FILTER TABS
+    ═══════════════════════════════════════════ -->
+    <div class="sticky top-16 lg:top-20 z-40 bg-charcoal/95 backdrop-blur-xl border-y border-white/5" role="tablist" aria-label="Menu categories">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex gap-2 py-3 overflow-x-auto scrollbar-hide" id="menu-tabs">
+          <button class="menu-tab active flex-shrink-0 font-heading font-600 text-sm px-5 py-2 rounded-full border transition-all" data-category="all" role="tab" aria-selected="true">
+            All Items
+          </button>
+          <button class="menu-tab flex-shrink-0 font-heading font-600 text-sm px-5 py-2 rounded-full border transition-all" data-category="steamed" role="tab" aria-selected="false">
+            🫧 Steamed
+          </button>
+          <button class="menu-tab flex-shrink-0 font-heading font-600 text-sm px-5 py-2 rounded-full border transition-all" data-category="fried" role="tab" aria-selected="false">
+            🍳 Fried
+          </button>
+          <button class="menu-tab flex-shrink-0 font-heading font-600 text-sm px-5 py-2 rounded-full border transition-all" data-category="jhol" role="tab" aria-selected="false">
+            🍜 Jhol
+          </button>
+          <button class="menu-tab flex-shrink-0 font-heading font-600 text-sm px-5 py-2 rounded-full border transition-all" data-category="sides" role="tab" aria-selected="false">
+            🥗 Sides
+          </button>
+          <button class="menu-tab flex-shrink-0 font-heading font-600 text-sm px-5 py-2 rounded-full border transition-all" data-category="drinks" role="tab" aria-selected="false">
+            🥤 Drinks
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         MENU SECTIONS
+    ═══════════════════════════════════════════ -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16" id="menu-container">
+
+      <!-- ─── STEAMED MOMOS ─── -->
+      <section class="menu-section mb-16" data-category="steamed" aria-labelledby="steamed-heading">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 id="steamed-heading" class="font-heading font-800 text-2xl sm:text-3xl text-white">Steamed Mo:Mos</h2>
+          <div class="flex-1 h-px bg-white/10"></div>
+          <span class="text-warm/60 text-sm font-body">8 pcs per serving</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Classic Chicken -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/chicken-steamed-momo.jpg" alt="Classic steamed chicken momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-saffron/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🥟</span></div>'">
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="badge bg-green-500/90 text-white text-xs font-600 px-2 py-0.5 rounded-full">Best Seller</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Classic Chicken</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$12.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Tender hand-folded dumplings with seasoned chicken, ginger, garlic, and aromatic Nepali spices. Served with signature tomato achar.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="1" title="Mild">🌶️</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Buff (Buffalo) -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/buff-steamed-momo.jpg" alt="Steamed buffalo momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-chili/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🥟</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Spiced Buff</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$13.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Juicy buffalo meat with traditional Nepali spice blend, onions, cilantro, and a hint of Szechuan pepper. Bold and authentic.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="2" title="Medium">🌶️🌶️</span>
+                <span class="dietary-badge bg-blue-500/10 text-blue-400">Halal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pork -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/pork-steamed-momo.jpg" alt="Steamed pork momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-turmeric/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🥟</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Classic Pork</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$12.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">A Nepali classic. Seasoned ground pork with ginger, garlic, green onion, and cumin. Simple, comforting, unforgettable.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="1" title="Mild">🌶️</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Veggie -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/veggie-steamed-momo.jpg" alt="Steamed vegetable momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-green-500/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🌱</span></div>'">
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="badge bg-green-600/90 text-white text-xs font-600 px-2 py-0.5 rounded-full">Vegan</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Garden Veggie</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$11.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Finely diced cabbage, carrots, mushrooms, tofu, and fresh herbs wrapped in delicate dough. Light yet deeply satisfying.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="1" title="Mild">🌶️</span>
+                <span class="dietary-badge bg-green-500/10 text-green-400">Vegan</span>
+                <span class="dietary-badge bg-yellow-500/10 text-yellow-400">GF Option</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Paneer -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/paneer-steamed-momo.jpg" alt="Steamed paneer momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-turmeric/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🧀</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Spiced Paneer</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$12.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Crumbled paneer cheese with bell peppers, onions, and a fragrant blend of cumin and turmeric. Vegetarian comfort at its best.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="1" title="Mild">🌶️</span>
+                <span class="dietary-badge bg-purple-500/10 text-purple-400">Vegetarian</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Lamb -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/lamb-steamed-momo.jpg" alt="Steamed lamb momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-chili/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🐑</span></div>'">
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="badge bg-turmeric/90 text-charcoal text-xs font-600 px-2 py-0.5 rounded-full">Premium</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Tender Lamb</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$15.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Succulent ground lamb seasoned with garam masala, fresh mint, and Nepali mountain herbs. Rich, juicy, and unforgettable.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="2" title="Medium">🌶️🌶️</span>
+                <span class="dietary-badge bg-blue-500/10 text-blue-400">Halal</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ─── FRIED MOMOS ─── -->
+      <section class="menu-section mb-16" data-category="fried" aria-labelledby="fried-heading">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 id="fried-heading" class="font-heading font-800 text-2xl sm:text-3xl text-white">Fried Mo:Mos</h2>
+          <div class="flex-1 h-px bg-white/10"></div>
+          <span class="text-warm/60 text-sm font-body">8 pcs per serving</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Crispy Chicken Fried -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/chicken-fried-momo.jpg" alt="Crispy fried chicken momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-turmeric/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🍳</span></div>'">
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="badge bg-saffron/90 text-white text-xs font-600 px-2 py-0.5 rounded-full">Popular</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Crispy Chicken</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$13.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Golden-fried to crispy perfection. Crunchy on the outside, juicy chicken filling inside. Served with spicy chili achar.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="1" title="Mild">🌶️</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Buff Fried -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/buff-fried-momo.jpg" alt="Crispy fried buff momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-chili/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🔥</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Spicy Buff Fried</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$14.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Double the crunch, double the flavor. Crispy fried buffalo momos with fiery Nepali spices and a chili-garlic dip.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="3" title="Hot">🌶️🌶️🌶️</span>
+                <span class="dietary-badge bg-blue-500/10 text-blue-400">Halal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Veggie Fried -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/veggie-fried-momo.jpg" alt="Crispy fried vegetable momos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-green-500/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🌿</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Crispy Veggie</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$12.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Perfectly fried veggie momos with a crispy golden shell. Packed with cabbage, mushrooms, and fresh herbs.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="1" title="Mild">🌶️</span>
+                <span class="dietary-badge bg-green-500/10 text-green-400">Vegan</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ─── JHOL MOMOS ─── -->
+      <section class="menu-section mb-16" data-category="jhol" aria-labelledby="jhol-heading">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 id="jhol-heading" class="font-heading font-800 text-2xl sm:text-3xl text-white">Jhol Mo:Mos</h2>
+          <div class="flex-1 h-px bg-white/10"></div>
+          <span class="text-warm/60 text-sm font-body">8 pcs in broth</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Chicken Jhol -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/jhol-momo.jpg" alt="Chicken jhol momos in spicy broth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-turmeric/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🍜</span></div>'">
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="badge bg-turmeric/90 text-charcoal text-xs font-600 px-2 py-0.5 rounded-full">Chef's Pick</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Chicken Jhol Mo:Mo</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$14.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Steamed chicken momos swimming in a rich, tangy sesame-tomato broth with roasted spices. The ultimate comfort bowl.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="2" title="Medium">🌶️🌶️</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Buff Jhol -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/buff-jhol-momo.jpg" alt="Buff jhol momos in spicy broth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-chili/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🍜</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Buff Jhol Mo:Mo</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$15.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Buffalo momos in our signature fiery jhol broth. Sesame, tomato, timur pepper — a warm hug in a bowl.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="3" title="Hot">🌶️🌶️🌶️</span>
+                <span class="dietary-badge bg-blue-500/10 text-blue-400">Halal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Veggie Jhol -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 hover:shadow-lg hover:shadow-saffron/10">
+            <div class="aspect-[4/3] overflow-hidden bg-charcoal-medium relative">
+              <img src="images/veggie-jhol-momo.jpg" alt="Vegetable jhol momos in spicy broth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-green-500/20 to-charcoal flex items-center justify-center\'><span class=\'text-5xl\'>🌱</span></div>'">
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="font-heading font-700 text-lg text-white group-hover:text-saffron transition-colors">Veggie Jhol Mo:Mo</h3>
+                <span class="font-heading font-800 text-saffron-light text-lg flex-shrink-0">$13.99</span>
+              </div>
+              <p class="text-warm/60 text-sm leading-relaxed mb-3">Plant-based momos in our rich jhol broth. All the comfort, none of the meat. Pure vegan soul food.</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="spice-indicator" data-level="2" title="Medium">🌶️🌶️</span>
+                <span class="dietary-badge bg-green-500/10 text-green-400">Vegan</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ─── SIDES ─── -->
+      <section class="menu-section mb-16" data-category="sides" aria-labelledby="sides-heading">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 id="sides-heading" class="font-heading font-800 text-2xl sm:text-3xl text-white">Sides &amp; Extras</h2>
+          <div class="flex-1 h-px bg-white/10"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Achar Trio -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-saffron/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🫙</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Achar Trio</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Tomato, sesame, and chili achar. Three dips, infinite flavor.</p>
+            <span class="font-heading font-800 text-saffron-light">$4.99</span>
+          </article>
+
+          <!-- Sadeko -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-chili/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🥗</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Momo Sadeko</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Chopped momos tossed in spicy Nepali sadeko sauce with onions, chilies, and lime.</p>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="spice-indicator" data-level="3" title="Hot">🌶️🌶️🌶️</span>
+            </div>
+            <span class="font-heading font-800 text-saffron-light">$9.99</span>
+          </article>
+
+          <!-- Aloo Chop -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-turmeric/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🥔</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Aloo Chop</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Crispy spiced potato cakes served with tangy tamarind chutney. 4 pieces.</p>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="dietary-badge bg-green-500/10 text-green-400">Vegan</span>
+              <span class="dietary-badge bg-yellow-500/10 text-yellow-400">GF</span>
+            </div>
+            <span class="font-heading font-800 text-saffron-light">$6.99</span>
+          </article>
+
+          <!-- Extra Dipping Sauce -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🍃</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Extra Achar</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Extra serving of our house-made dipping sauce. Choose tomato, sesame, or chili.</p>
+            <span class="font-heading font-800 text-saffron-light">$1.99</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ─── DRINKS ─── -->
+      <section class="menu-section mb-8" data-category="drinks" aria-labelledby="drinks-heading">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 id="drinks-heading" class="font-heading font-800 text-2xl sm:text-3xl text-white">Drinks</h2>
+          <div class="flex-1 h-px bg-white/10"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Mango Lassi -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-turmeric/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🥭</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Mango Lassi</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Creamy yogurt smoothie with fresh mango pulp. Sweet, tangy, refreshing.</p>
+            <span class="font-heading font-800 text-saffron-light">$4.99</span>
+          </article>
+
+          <!-- Masala Chai -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-saffron/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">☕</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Masala Chai</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Spiced Nepali milk tea with cardamom, cinnamon, and ginger. Hot or iced.</p>
+            <span class="font-heading font-800 text-saffron-light">$3.99</span>
+          </article>
+
+          <!-- Fresh Lime Soda -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🍋</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Fresh Lime Soda</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Sparkling limeade with a pinch of Himalayan salt. Sweet or salted.</p>
+            <span class="font-heading font-800 text-saffron-light">$3.49</span>
+          </article>
+
+          <!-- Soft Drinks -->
+          <article class="menu-item group bg-charcoal-light rounded-2xl overflow-hidden border border-white/5 hover:border-saffron/30 transition-all duration-500 p-5">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">🥤</span>
+            </div>
+            <h3 class="font-heading font-700 text-base text-white group-hover:text-saffron transition-colors mb-1">Soft Drinks</h3>
+            <p class="text-warm/60 text-sm leading-relaxed mb-3">Coke, Sprite, Dr Pepper, and more. Canned or fountain.</p>
+            <span class="font-heading font-800 text-saffron-light">$2.49</span>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SPICE LEVEL LEGEND
+    ═══════════════════════════════════════════ -->
+    <section class="bg-charcoal-light py-12" aria-label="Spice level guide">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-sm">
+          <span class="text-warm/60 font-heading font-600 uppercase tracking-wider">Spice Guide:</span>
+          <div class="flex items-center gap-6 flex-wrap justify-center">
+            <span class="flex items-center gap-2 text-warm/60"><span>🌶️</span> Mild</span>
+            <span class="flex items-center gap-2 text-warm/60"><span>🌶️🌶️</span> Medium</span>
+            <span class="flex items-center gap-2 text-warm/60"><span>🌶️🌶️🌶️</span> Hot</span>
+          </div>
+          <span class="text-warm/60 text-xs">Ask us to adjust spice levels!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative py-20 bg-saffron-dark overflow-hidden" aria-label="Order call to action">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-saffron/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading font-800 text-3xl sm:text-4xl text-white mb-4">Ready to Feast?</h2>
+        <p class="text-white text-lg max-w-xl mx-auto mb-8">Skip the line — order ahead for pickup or come dine with us in Manor, TX.</p>
+        <a href="#order" class="inline-flex items-center gap-2 bg-white text-saffron-dark hover:bg-warm font-heading font-700 text-lg px-8 py-4 rounded-full transition-all hover:scale-105 hover:shadow-xl">
+          Order Now
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="bg-charcoal border-t border-white/5 pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-block mb-4"><span class="text-2xl font-heading font-800"><span class="text-saffron">WoW</span> <span class="text-white">Mo:Mo</span></span></a>
+          <p class="text-warm/60 text-sm leading-relaxed max-w-xs">Authentic Nepali momos, hand-folded with love in Manor, TX.</p>
+        </div>
+        <div>
+          <h3 class="font-heading font-700 text-white text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="menu.html" class="text-warm/60 hover:text-saffron text-sm transition-colors">Menu</a></li>
+            <li><a href="our-story.html" class="text-warm/60 hover:text-saffron text-sm transition-colors">Our Story</a></li>
+            <li><a href="contact.html" class="text-warm/60 hover:text-saffron text-sm transition-colors">Visit Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-heading font-700 text-white text-sm uppercase tracking-wider mb-4">Hours</h3>
+          <ul class="space-y-2 text-warm/60 text-sm">
+            <li class="flex justify-between"><span>Mon – Thu</span><span class="text-warm/70">11am – 9pm</span></li>
+            <li class="flex justify-between"><span>Fri – Sat</span><span class="text-warm/70">11am – 10pm</span></li>
+            <li class="flex justify-between"><span>Sunday</span><span class="text-warm/70">12pm – 8pm</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-heading font-700 text-white text-sm uppercase tracking-wider mb-4">Contact</h3>
+          <ul class="space-y-2 text-warm/60 text-sm">
+            <li>123 Main Street, Manor, TX 78653</li>
+            <li><a href="tel:+15125551234" class="hover:text-saffron transition-colors">(512) 555-1234</a></li>
+            <li><a href="mailto:hello@wowmomo.com" class="hover:text-saffron transition-colors">hello@wowmomo.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-warm/50 text-sm">&copy; 2026 WoW Mo:Mo. All rights reserved.</p>
+        <div class="flex gap-6 text-warm/50 text-sm">
+          <a href="#" class="hover:text-warm/80 transition-colors">Privacy</a>
+          <a href="#" class="hover:text-warm/80 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky Order button -->
+  <div class="fixed bottom-0 inset-x-0 z-50 sm:hidden p-4 bg-gradient-to-t from-charcoal via-charcoal/95 to-transparent pointer-events-none">
+    <a href="#order" class="pointer-events-auto flex items-center justify-center gap-2 bg-saffron-dark hover:bg-saffron text-white font-heading font-700 text-base py-4 rounded-full w-full shadow-xl shadow-saffron/30 transition-all active:scale-95">
+      🥟 Order Now
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
